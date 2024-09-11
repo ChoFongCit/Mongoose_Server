@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+    <body>
+        <%- include('partials/headers.ejs') %>
+        <div class="wrapper">
+        <h1>Make a booking</h1>
+        <div style="margin:0 auto ; width:50%; padding:20px">
+          <form action="/booking/newBook" method="POST">
+          <label>Name</label>
+          <input type="text" name="name" id="name" required>
+          <br><br>
+          <label>Email</label>
+          <input type="text" name="email" id="email" required>
+          <br><br>
+          <label>Activity</label>
+            <select name="activity">
+            <option value="Camping">Camping</option>
+            <option value="Climbing">Climbing</option>
+            </select>
+            <br><br>
+            <label>Booked for</label>
+            <input type="datetime-local" name="BookedFor" id="BookedFor">
+            <br><br>
+            <label>Card number:</label>
+            <input type="text" name="cardNumber" id="cardNumber" required>
+            <br><br>
+            <label>CVV:</label>
+            <input type="text" name="CVV" id="CVV" required>
+            <br><br>
+            <label>Expiry Date:</label>
+            <input type="date" name="expiryDate" required>
+          <button type="submit">submit</button>
+            </form>
+          </div>
+        </body>
+</div>
+</div>
+</html>

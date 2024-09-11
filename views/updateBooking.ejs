@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <%- include ('../views/partials/headers.ejs') %>
+    <div class="wrapper">
+        <h1>Update a booking</h1>
+    <form action="/booking/update/complete" method="POST">
+        <label>Name</label>
+        <input type="hidden" name ="_id" value="<%=booking._id%>"> 
+        <input type="text" name="name" id="name" value="<%=booking.name%>" required>
+        <br><br>
+        <label>Email</label>
+        <input type="text" name="email" id="email" value="<%=booking.email%>" required>
+        <br><br>
+        <label>Activity</label>
+          <select name="activity" value="<%=booking.activity%>">
+          <option value="Camping">Camping</option>
+          <option value="Climbing">Climbing</option>
+          </select>
+          <br><br>
+          <!-- <input type="hidden" name="createdAt" value="<%= booking.createdAt%>"> -->
+          <label>Booked for</label>
+          <input type="datetime-local" name="BookedFor" id="BookedFor" value="<%=booking.BookedFor%>">
+          <br><br>
+          <label>Card number:</label>
+          <input type="text" name="cardNumber" id="cardNumber" value ="<%=booking.cardNumber%>" required>
+          <br><br>
+          <label>CVV:</label>
+          <input type="text" name="CVV" id="CVV" value="<%=booking.CVV%>" required>
+          <br><br>
+          <label>Expiry Date:</label>
+          <input type="date" name="expiryDate" value="<%=booking.expiryDate%>" required>
+        <button type="submit">submit</button>
+        </form>
+        </div>
+</body>

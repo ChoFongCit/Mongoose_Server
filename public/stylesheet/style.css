@@ -1,0 +1,121 @@
+body{
+    background-color:brown;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.wrapper{
+    width:85%;
+    margin-left:5rem;
+    margin-right:5rem;
+    padding-bottom: 5rem;
+    background-color:aliceblue;
+    border-radius:10px;
+    min-height:400px;
+}
+
+.nav{
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
+    background-color:darkgoldenrod;
+    
+    width:85%;
+    margin-left:5rem;
+    margin-right:5rem;
+    margin-bottom: 1rem;
+    border-radius:10px;
+}
+.nav a{
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
+    font-size:1rem;
+    transition:color 1s;
+}
+.nav a:hover{
+    
+    color:darkseagreen;
+}
+tbody tr{
+    align-self: center;
+}
+tbody tr td{
+    padding: 0rem 1rem 2rem 0rem;; 
+}
+form button{
+    margin:0 5rem 0 5rem ;
+    border-style:none;
+    background-color: beige;
+    font-size: 16px;
+    padding: 15px 32px;
+    border-radius: 7px;
+}
+form button:hover{
+    background-color:burlywood;
+}
+table{
+    overflow-x: scroll;
+}
+.img{
+    height: 270px;
+    
+    width: 400px;
+    margin: 0 5rem ;
+    transition: background 1s ease-in-out, font-size 1s, text-align 1s;
+}
+.i-a{
+    background: url('../images/camping.jpg') no-repeat center /cover;
+}
+.i-b{
+    background: url('../images/climbing.jpg') no-repeat center /cover;
+}
+.hidden:hover{
+    background-color: azure;
+    background: url();
+    font-size: 5rem;
+    text-align: center;
+    
+}
+.imgCluster{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+input{
+    border-style:none;
+    border-radius:10px;
+    background-color: aquamarine;
+    transition: background-color 0.2s ease-in-out;
+}
+input:focus{
+    background-color: white;
+}
+.dropDown{
+    position:relative;
+}
+.hiddenText{
+    display:none;
+    transition: display 0.3s;
+    position:absolute;
+    z-index:1;
+    background-color:aquamarine;
+}
+.dropDown:hover .hiddenText{
+    max-height:fit-content;
+    display:block;
+    
+}
+li{
+    border-bottom-width:2px;
+    margin-bottom:1rem;
+}
+#cm:hover{
+    font-size: xx-large;
+    font-style: italic;
+}
+.genericText{
+    width: 85%;
+    align-self: center;
+    justify-self: center;
+    margin: 0 5rem 0 5rem;
+}

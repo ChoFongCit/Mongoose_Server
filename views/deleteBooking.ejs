@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <%- include ('../views/partials/headers.ejs') %>
+    <% const options={year:'numeric', month :'long', day:'numeric', hour : '2-digit', minute :'2-digit' ,second: '2-digit'}; %>
+    <div class="wrapper">
+        <h1>Delete Booking?</h1>
+    <form action="/booking/delete/complete" method="POST">
+        <input type="hidden" name ="_id" value="<%=booking._id%>"> 
+        <article>Name: <%= booking.name%><br>
+        Email: <%= booking.email%><br>
+        Activity: <%= booking.activity %><br>
+        Booked For: <%= booking.BookedFor.toLocaleString(undefined,options) %><br>
+        </article>
+        <button type="submit">confirm</button>
+        </form>
+        
+        </div>
+</body>

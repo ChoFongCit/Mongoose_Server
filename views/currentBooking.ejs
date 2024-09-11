@@ -1,0 +1,37 @@
+<body>
+    <%- include("../views/partials/headers.ejs") %>
+<div class="wrapper">
+    <h1>List of Bookings</h1>
+    <table class = "table table-inverse">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Activity</th>
+                <th>Booked for</th>
+                <th>Card Number</th>
+                <th>CVV</th>
+                <th>Expiry Date</th>
+                <th>Created At</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0 ; i< bookingList.length ; i++){ %>
+                <tr><% const options={year:'numeric', month :'long', day:'numeric', hour : '2-digit', minute :'2-digit' ,second: '2-digit'}; %>
+                    <td><%= bookingList[i].name %></td>
+                    <td><%= bookingList[i].email %></td>
+                    <td><%= bookingList[i].activity %></td>
+                    <td><%=bookingList[i].BookedFor.toLocaleString(undefined, options) %></td>
+                    <td><%= bookingList[i].cardNumber %></td>
+                    <td><%= bookingList[i].CVV %></td>
+                    <td><%= (bookingList[i].expiryDate.getMonth()+1) +'/'+bookingList[i].expiryDate.getFullYear() %></td>
+                    <td><%= bookingList[i].createdAt.toLocaleString(undefined, options) %></td>
+                    <td><a href="/booking/update/<%= bookingList[i]._id %>">Update</a><br><a href="/booking/delete/<%= bookingList[i]._id %>">Delete</a></td>
+                </tr>
+            <%} %>
+        </tbody>
+    </table>
+    
+</div>
+</body>
